@@ -4,8 +4,9 @@ import router from './router';
 import store from './store';
 import fastClick from 'fastclick';/*移动端300毫秒延迟点击解决*/
 import './registerServiceWorker';
-import './assets/styles/reset.css';/*全局css*/
-import './assets/styles/border.css';/*移动端1像素边框问题*/
+import 'styles/reset.css';/*全局css*/
+import 'styles/border.css';/*移动端1像素边框问题*/
+import 'styles/iconfont.css';/*iconfont*/
 
 Vue.config.productionTip = false;
 fastClick.attach(document.body);
