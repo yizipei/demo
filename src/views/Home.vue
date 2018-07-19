@@ -1,16 +1,16 @@
 <template>
   <div class="home">
-    <HomeComponent></HomeComponent>
+    <home-header></home-header>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HomeComponent from '@/components/home/Home.vue'; // @ is an alias to /src
+import HomeHeader from '@/components/home/Header.vue'; // @ is an alias to /src
 
 @Component({
   components: {
-    HomeComponent,
+    HomeHeader,
   },
 })
 export default class Home extends Vue {}
