@@ -20,36 +20,32 @@
 
 </template>
 <script>
-  //  行为
-  export default{
-    props:['score'],
-    created(){
+  export default {
+    props: ['score'],
+    created() {
       console.log("子组件");
-
     },
-    mounted(){
+    mounted() {
       console.log("打印传递的分数");
     },
-    computed:{
-      starArrs(){
-        var starArr=[];    //3.9
+    computed: {
+      starArrs() {
+        var starArr = [];    //3.9
 //              全星星的个数
         let onstar = parseInt(this.score);
-        console.log(onstar)
 //              是否有半星
-        let halfStar = Math.round(this.score-onstar)?true:false;
+        let halfStar = Math.round(this.score - onstar) ? true : false;
 //              有多少课灰色的星星
 
-        for (var i=0;i<onstar;i++) {
+        for (var i = 0; i < onstar; i++) {
           starArr.push('onstar')
         }
-        if(halfStar){
+        if (halfStar) {
           starArr.push('halfstar')
         }
-        while(starArr.length<5){
+        while (starArr.length < 5) {
           starArr.push('offstar')
         }
-
         return starArr;
       }
     }
@@ -58,22 +54,25 @@
 </script>
 <style scoped="scoped">
   /*独立作用域的样式*/
-  .staritem{
+  .staritem {
     display: inline-block;
     width: 0.14rem;
     height: 0.14rem;
 
   }
+
   /*全星星*/
-  .onstar{
+  .onstar {
     background: url('~@/assets/images/star24_on@2x.png');
     background-size: 0.14rem;
   }
-  .halfstar{
+
+  .halfstar {
     background: url('~@/assets/images/star24_half@2x.png');
     background-size: 0.14rem;
   }
-  .offstar{
+
+  .offstar {
     background: url('~@/assets/images/star24_off@2x.png');
     background-size: 0.14rem;
   }
