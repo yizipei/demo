@@ -7,7 +7,7 @@
           <div class="icon-img-wrap" >
             <img class="icon-img" :src="item.url">
           </div>
-          <span class="icon-desc">热门景点热门景点热门景点热门景点</span>
+          <span class="icon-desc">热门景点</span>
         </div>
       </swiper-slide>
       <!-- Optional controls -->
@@ -23,37 +23,37 @@
       return {
         iconsList: [
           {
-            id: '001',
+            id: Math.random(),
             url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
           },{
-            id: '001',
+            id: Math.random(),
             url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
           },{
-            id: '001',
+            id: Math.random(),
             url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
           },{
-            id: '001',
+            id: Math.random(),
             url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
           },{
-            id: '001',
+            id: Math.random(),
             url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
           },{
-            id: '001',
+            id: Math.random(),
             url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
           },{
-            id: '001',
+            id: Math.random(),
             url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
           },{
-            id: '001',
+            id: Math.random(),
             url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
           },{
-            id: '001',
+            id: Math.random(),
             url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
           },{
-            id: '001',
+            id: Math.random(),
             url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
           },{
-            id: '001',
+            id: Math.random(),
             url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
           },
         ],
@@ -84,6 +84,7 @@
     width: 100%
     height: 0
     padding-bottom: 50%
+    background: #fff
     .icon
       width: 25%
       height: 0
@@ -95,10 +96,10 @@
       .icon-img-wrap
         width: 100%
         height: .6rem
-        margin-top: .04rem
+        margin-top: .05rem
         .icon-img
           display: block
-          width: 78%
+          width: 66%
           margin: 0 auto
       .icon-desc
         display: block

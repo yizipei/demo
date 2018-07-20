@@ -9,5 +9,8 @@
   </div>
 </template>
 
-<style>
+<style lang="sass">
+  #app
+    background: #f5f5f5
+    overflow-x: hidden
 </style>
