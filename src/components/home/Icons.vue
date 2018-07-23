@@ -95,7 +95,6 @@
       box-sizing: border-box
       .icon-img-wrap
         width: 100%
-        height: .6rem
         margin-top: .05rem
         .icon-img
           display: block
@@ -107,6 +106,6 @@
         margin-top: .1rem
         text-align: center
         font-weight: 500
-        font-size: 14px
+        font-size: .14rem
         @include ellipsis()
 </style>

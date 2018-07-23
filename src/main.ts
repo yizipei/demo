@@ -21,4 +21,4 @@ new Vue({/*键值相同省略 router: router*/
 }).$mount('#app');
 
 /*路由用于url返回页面*/
-/*q rem = 100px*/
+/*1 rem = 100px*/

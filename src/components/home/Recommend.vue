@@ -91,7 +91,6 @@ export default {
     background: #fff
     margin-top: .1rem
     .title
-      width: 100%
       height: .3rem
       line-height: .3rem
       font-size: .16rem
@@ -104,21 +103,17 @@ export default {
       margin-top: .1rem
       padding-left: .12rem
       .item
-        width: 100%
         height: 1rem
         padding: .1rem
-        >div
-          float: left
         .item-left
           width: 1rem
           height: 1rem
+          float: left
           .item-img
             width: 100%
         .item-right
-          width: 2.32rem
+          overflow: hidden
           padding-left: .1rem
-          >div
-            width: 100%
           .content-top
             margin-top: .13rem
             font-size: .16rem
@@ -144,5 +139,4 @@ export default {
             .position
               float: right
               padding-top: .04rem
-          div
 </style>
