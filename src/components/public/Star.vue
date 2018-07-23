@@ -23,10 +23,10 @@
   export default {
     props: ['score'],
     created() {
-      console.log("子组件");
+      //console.log("子组件");
     },
     mounted() {
-      console.log("打印传递的分数");
+      //console.log("打印传递的分数");
     },
     computed: {
       starArrs() {

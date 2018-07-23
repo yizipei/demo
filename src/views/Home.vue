@@ -1,9 +1,9 @@
 <template>
   <div class="home">
-    <home-header></home-header>
-    <home-swiper></home-swiper>
-    <home-icons></home-icons>
-    <home-recommend></home-recommend>
+    <home-header :city="city"></home-header>
+    <home-swiper :swiperList="swiperList"></home-swiper>
+    <home-icons :iconList="iconList"></home-icons>
+    <home-recommend :recommendList="recommendList"></home-recommend>
   </div>
 </template>
 
@@ -22,16 +22,32 @@ import axios from 'axios';
     HomeIcons,
     HomeRecommend,
   },
+  data () {
+    return {
+      city: '',
+      swiperList: [],
+      iconList: [],
+      recommendList: [],
+    }
+  },
   //获取所有组件的数据
   mounted() {
     this.getHomeInfo();
   },
   methods: {
     getHomeInfo() {
-      axios.get('/public/mock/index.json')
+      axios.get('/api/index.json')
         .then(this.getHomeInfoSucc);
     },
     getHomeInfoSucc(res) {
+      res = res.data;
+      if (res.ret && res.data) {
+        const data = res.data;
+        this.city = data.city;
+        this.swiperList = data.swiperList;
+        this.iconList = data.iconList;
+        this.recommendList = data.recommendList;
+      }
       console.log(res);
     },
   }

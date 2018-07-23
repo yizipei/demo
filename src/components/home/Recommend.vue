@@ -5,9 +5,9 @@
       猜你喜欢
     </div>
     <ul class="items">
-      <li class="item" v-for="i of commandList" :key="i.id">
+      <li class="item" v-for="i of recommendList" :key="i.id">
         <div class="item-left">
-          <img class="item-img" :src="i.url" >
+          <img class="item-img" :src="i.imgUrl" >
         </div>
         <div class="item-right">
           <div class="content-top">
@@ -15,19 +15,19 @@
           </div>
           <div class="content-middle">
             <div class="star">
-              <public-star :score="i.level"></public-star>
+              <public-star :score="4.5"></public-star>
             </div>
             <div class="comment">
-              {{i.comment}}条评论
+              46584条评论
             </div>
           </div>
           <div class="content-bottom">
             <div class="price">
-              <span class="price-num">{{i.price}}</span>
+              <span class="price-num">4688</span>
               <span>起</span>
             </div>
             <div  class="position">
-              {{i.position}}
+              随机
             </div>
           </div>
         </div>
@@ -41,44 +41,8 @@ import PublicStar from '@/components/public/Star.vue';
 
 export default {
   name: 'HomeRecommend',
-  data() {
-    return {
-      commandList: [
-        {
-          id: Math.random(),
-          url: 'http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg',
-          title: '上海迪士尼乐园',
-          level: 5,
-          comment: 15646,
-          price: 45.5,
-          position: '杭州',
-        },{
-          id: Math.random(),
-          url: 'http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg',
-          title: '上海迪士尼乐园',
-          level: 4.5,
-          comment: 15646,
-          price: 45.5,
-          position: '杭州',
-        },{
-          id: Math.random(),
-          url: 'http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg',
-          title: '上海迪士尼乐园',
-          level: 3.5,
-          comment: 15646,
-          price: 45.5,
-          position: '杭州',
-        },{
-          id: Math.random(),
-          url: 'http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg',
-          title: '上海迪士尼乐园',
-          level: 4.5,
-          comment: 15646,
-          price: 45.5,
-          position: '杭州',
-        },
-      ],
-    };
+  props: {
+    recommendList: Array,
   },
   components: {
     PublicStar

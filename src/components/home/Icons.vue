@@ -5,7 +5,7 @@
       <swiper-slide v-for="(page, index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img-wrap" >
-            <img class="icon-img" :src="item.url">
+            <img class="icon-img" :src="item.imgUrl">
           </div>
           <span class="icon-desc">热门景点</span>
         </div>
@@ -19,53 +19,21 @@
 <script>
   export default {
     name: 'HomeIcons',
+    props: {
+      iconList: Array,
+    },
     data() {
       return {
-        iconsList: [
-          {
-            id: Math.random(),
-            url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-          },{
-            id: Math.random(),
-            url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-          },{
-            id: Math.random(),
-            url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-          },{
-            id: Math.random(),
-            url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-          },{
-            id: Math.random(),
-            url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-          },{
-            id: Math.random(),
-            url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-          },{
-            id: Math.random(),
-            url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-          },{
-            id: Math.random(),
-            url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-          },{
-            id: Math.random(),
-            url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-          },{
-            id: Math.random(),
-            url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-          },{
-            id: Math.random(),
-            url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-          },
-        ],
         swiperOption: {
           // loop: true,
+          autoplay:false
         },
       };
     },
     computed: {
       pages() {
         const pages =[];
-        this.iconsList.forEach((item, index) => {
+        this.iconList.forEach((item, index) => {
           const page = Math.floor(index / 8);
           if (!pages[page]) {
             pages[page] = [];
