@@ -7,10 +7,12 @@
       <i class="iconfont icon-sousuo"></i>
       输入城市/景点/游玩主题
     </div>
-    <div class="header-right">
-      {{city}}
-      <i class="iconfont icon-jiantouarrow486"></i>
-    </div>
+    <router-link to="city">
+      <div class="header-right">
+        {{city}}
+        <i class="iconfont icon-jiantouarrow486"></i>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -28,8 +30,8 @@
   @import '~styles/varibles'
   .header
     display: flex
-    height: .44rem
-    line-height: .44rem
+    height: $headerHeight
+    line-height: $headerHeight
     background: $bgColor
     color: #fff
     .header-left
@@ -52,6 +54,7 @@
       width: .66rem
       float: right
       text-align: center
+      color: #fff
       .icon-jiantouarrow486
         margin-left: -.04rem
         font-size: .14rem
